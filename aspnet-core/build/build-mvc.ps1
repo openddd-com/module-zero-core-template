@@ -21,6 +21,7 @@ Set-Location $webMvcFolder
 dotnet publish --output (Join-Path $outputFolder "Mvc")
 
 ## CREATE DOCKER IMAGES #######################################################
+docker-machine env default| Invoke-Expression
 
 # Mvc
 Set-Location (Join-Path $outputFolder "Mvc")
